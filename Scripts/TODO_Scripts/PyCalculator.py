@@ -1,5 +1,7 @@
  # Python program for a simple calculator 
-  
+	
+from math import *
+
 # Function to add two numbers  
 def add(num1, num2): 
     return num1 + num2 
@@ -14,7 +16,11 @@ def multiply(num1, num2):
   
 # Function to divide two numbers 
 def divide(num1, num2): 
-    return num1 / num2 
+    return num1 / num2
+
+# Function to find percentage
+def percentage(per, value):
+	return (per / 100) * value
 	
 # Function to find Sin of a number
 def sinnum(num1):
@@ -46,7 +52,8 @@ print("Please select operation -\n"\
         "4. Divide\n"\
         "5. Sin\n"\
         "6. Cos\n"\
-        "7. Tan\n")
+        "7. Tan\n"\
+        "8. percentage\n")
 
 # Take input from the user  
 select = int(input("Select operation among 1, 2, 3, 4, 5, 6, 7: ")) 
@@ -68,7 +75,7 @@ elif select == 4:
     print("\n", number_1, "/", number_2, "=", divide(number_1, number_2))
 
  elif select == 5:
-    number_1=one_input  ()
+    number_1=one_input()
     print("\nSin of ", number_1,"=",sinnum(number_1))
 
  elif select == 6:
@@ -78,6 +85,11 @@ elif select == 4:
  elif select == 7:
     number_1=one_input()  
     print("\nTan of ", number_1,"=",tannum(number_1))
+	
+ elif select == 8:
+    value = int(input("Enter value: "))
+    per = int(input("How many % you want: "))
+    print("\n", pre, "% of", value, "is", percentage(per, value))
 
 else: 
     print("\nInvalid input")
